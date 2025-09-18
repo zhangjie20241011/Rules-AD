@@ -1,0 +1,25 @@
+!!&&爱奇艺视频过滤规则&&
+!以下5条过滤视频首次播放的广告
+iqiyi.com##.black-screen[data-cupid=adblock-blackscreen], .qy-plist-ad
+iqiyi.com##.cupid-panel + div, div[data-adzone],#block-V
+iqiyi.com##+js(set, Object.prototype.blackscreenDuration, 1)
+iqiyi.com##+js(set, QiyiPlayerProphetData.a.data, {})
+||t7z.cupid.iqiyi.com
+!以下1条过滤首次打开电视剧集无广告，点击下一集有广告，再点击下一集无广告循环的规则
+||mesh.if.iqiyi.com
+!以下1条过滤屏蔽视频播放前(和换集播放前)等待1秒的黑屏浮窗
+iqiyi.com##[class="post-container"]
+##.black-screen
+!以下2条用于过滤爱奇艺登录浮窗和背景幕(id号过滤)
+iqiyi.com###qy_pca_login_root
+iqiyi.com###full_mask_layer_id
+!以下1条过滤播放集数上部的"开通会员提示"浮窗(id号过滤)
+iqiyi.com###marketing_bk
+!以下1条过滤播放集数下的广告浮窗(id号过滤)
+iqiyi.com###middle_banner_ad_bk
+!以下1条过滤电视剧名上部的游戏类浮窗
+iqiyi.com##.config-page_tabMenuBottomLine__h-45z
+!以下1条过滤电视剧名上部“登录注册送大礼包”浮窗,过滤iqiyi.com页面中以类名meta_loginTips__开头的类
+iqiyi.com##[class^="meta_loginTips__"]
+!
+!
